@@ -3,7 +3,6 @@
  *
  *	Author: Iskender Eguz
  *	Date: 2016-11-26
- *  Version: 1.0
  *  
  *  Special thanks to:
  *    - Brian Dahlem, for ZWave Scene Control and Button Controller, that serves as the basis of this code
@@ -169,7 +168,7 @@ def getButtonSections(buttonNumber) {
 	}
 }
 
-// Get dim levels if/when needed
+// Get scene details if/when needed
 def getDimmingLevels(buttonNumber) {
    	def scenelights = find('lights', buttonNumber, "scene")
 	if (scenelights != null) {
@@ -217,8 +216,6 @@ def initialize() {
     }
     
     state.last_active_scene = "N/A"
-    // state.last_active_button = "N/A"
-    // state.last_toggled_button = "N/A"
 
 }
 
@@ -504,11 +501,11 @@ private def pageAbout() {
 
 
 private def textVersion() {
-    def text = "Version 0.1.0"
+    def text = "Version 1.0.0"
 }
 
 private def textCopyright() {
-    def text = "Copyright (c) 2016 IEGUZ"
+    def text = "Copyright (c) 2016"
 }
 
 private def textLicense() {
